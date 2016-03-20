@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "GameScene.hpp"
 
 USING_NS_CC;
 
@@ -52,7 +52,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     // 创建第一个scene  auto scene = MyClass::create();
-    auto scene = HelloWorld::createScene();
+    auto scene = GameScene::create();
 
     // run
     director->runWithScene(scene);

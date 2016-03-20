@@ -52,6 +52,7 @@
 		67264650BD08F5A9E8B7ED1D /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D65417CAF89D7ADE4119FEC /* libcocos2d iOS.a */; };
 		6CC743B7AEC6C4A1F5FEC304 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 01F741B993AED8B544209AD5 /* res */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		A10AA03C1C9F57A500EE907D /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A10AA03A1C9F57A500EE907D /* GameScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -112,6 +113,8 @@
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		5D65417CAF89D7ADE4119FEC /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A10AA03A1C9F57A500EE907D /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		A10AA03B1C9F57A500EE907D /* GameScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameScene.hpp; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -247,6 +250,8 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				A10AA03A1C9F57A500EE907D /* GameScene.cpp */,
+				A10AA03B1C9F57A500EE907D /* GameScene.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -427,6 +432,7 @@
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				A10AA03C1C9F57A500EE907D /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,10 +475,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -507,10 +510,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -546,10 +546,7 @@
 					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
@@ -580,10 +577,7 @@
 					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
