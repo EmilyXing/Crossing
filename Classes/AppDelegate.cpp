@@ -24,24 +24,34 @@ void AppDelegate::initGLContextAttrs()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
+    
+    // singleton 每次get唯一实例 导演一个就够
     auto director = Director::getInstance();
+    
+    // 背景的布 OpenGL View 如果没有 create 如果有 get
     auto glview = director->getOpenGLView();
     if(!glview) {
         glview = GLViewImpl::createWithRect("Xing", Rect(0, 0, 960, 640));
         director->setOpenGLView(glview);
     }
-
+    
+    // get之后 设置分辨率 以及屏幕适配
     director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
 
-    // turn on display FPS
+
+    // 显示debug数据 记得app发布时设置成false
     director->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
+    // 每秒的帧数 -> 让画面动起来
     director->setAnimationInterval(1.0 / 60);
-
+    
+    // 相当于include资源文件的搜索路径
     FileUtils::getInstance()->addSearchPath("res");
+    
 
     // create a scene. it's an autorelease object
+    // 创建第一个scene  auto scene = MyClass::create();
     auto scene = HelloWorld::createScene();
 
     // run
