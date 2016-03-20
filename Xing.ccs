@@ -3,9 +3,18 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Image Name="HelloWorld.png" />
-        <Project Name="MainScene.csd" Type="Scene" />
-        <Image Name="wugui.jpg" />
+        <Folder Name="assets">
+          <Image Name="background.png" />
+          <Image Name="ball1.png" />
+          <Image Name="ball2.png" />
+          <Image Name="ball3.png" />
+          <Image Name="ball4.png" />
+          <Image Name="ball5.png" />
+          <Image Name="board.png" />
+          <Image Name="logo.png" />
+        </Folder>
+        <Project Name="Board.csd" Type="Node" />
+        <Project Name="GameScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
