@@ -13,7 +13,6 @@
           <Image Name="board.png" />
           <Image Name="logo.png" />
         </Folder>
-        <Project Name="Board.csd" Type="Node" />
         <Project Name="GameScene.csd" Type="Scene" />
       </RootFolder>
     </Group>

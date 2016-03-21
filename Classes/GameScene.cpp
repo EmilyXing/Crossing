@@ -9,7 +9,7 @@
 #include "GameScene.hpp"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
-#include "Ball.hpp"
+#include "Board.hpp"
 
 USING_NS_CC;
 
@@ -21,25 +21,17 @@ bool GameScene::init()
     }
     
     auto rootNode = CSLoader::createNode("GameScene.csb");
-    
     addChild(rootNode);
     
+    auto board = Board::create();
     
-    auto greenBall = Ball::create();
+    board -> setPosition(480,320);
     
-    greenBall -> setColor(2);
+    rootNode -> addChild(board);
     
-    rootNode -> addChild(greenBall);
+    board -> addBall(2, 3, 2);
     
-    greenBall -> setPosition(Vec2(300, 300));
-    
-    auto orangeBall = Ball::create();
-    
-    orangeBall -> setColor(4);
-    
-    rootNode -> addChild(orangeBall);
-    
-    orangeBall -> setPosition(300,300);
+    board -> removeBall(2,3);
     
     return true;
 }
