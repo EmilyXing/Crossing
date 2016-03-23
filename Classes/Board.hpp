@@ -11,6 +11,7 @@
 
 #include <cocos2d.h>
 #include <vector>
+#include "Common.h"
 
 class Ball;
 
@@ -23,7 +24,7 @@ public:
     
     virtual bool init() override;
     
-    bool addBall(int row, int col, int color);
+    bool addBall(int row, int col,Color color);
     
     bool removeBall(int row, int col);
     

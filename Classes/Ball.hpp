@@ -10,19 +10,20 @@
 #define Ball_hpp
 
 #include <cocos2d.h>
+#include "Common.h"
 
 class Ball : public cocos2d::Sprite
 {
-    int m_color;
-    
 public:
     
     CREATE_FUNC(Ball);
     virtual bool init() override;
     
-    void setColor(int x);
-    int getColor();
+    void setColor(Color color);
+    Color getColor();
     
+private:
+    Color m_color;
 };
 
 #endif /* Ball_hpp */

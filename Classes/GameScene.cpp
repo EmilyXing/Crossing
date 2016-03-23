@@ -10,6 +10,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "Board.hpp"
+#include "Common.h"
 
 USING_NS_CC;
 
@@ -29,9 +30,11 @@ bool GameScene::init()
     
     rootNode -> addChild(board);
     
-    board -> addBall(2, 3, 2);
+    board -> addBall(2, 3, Color::green);
     
-    board -> removeBall(2,3);
+    board -> addBall(4, 5, Color::purple);
+    
+    //board -> removeBall(2,3);
     
     return true;
 }

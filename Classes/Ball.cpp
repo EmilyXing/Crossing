@@ -7,7 +7,6 @@
 //
 
 #include <string>
-#include <iostream>
 #include "Ball.hpp"
 using namespace std;
 
@@ -18,21 +17,23 @@ bool Ball::init()
         return false;
     }
     
-    m_color = 1;
+    m_color = Color::blue;
     
     return true;
 }
 
-void Ball::setColor(int x)
+void Ball::setColor(Color color)
 {
-    m_color = x;
+    m_color = color;
     
     string name = "assets/ball" + to_string(m_color) + ".png";
+    
+    //CCLOG("name = %s", name.c_str());
     
     setTexture(name);
 }
 
-int Ball::getColor()
+Color Ball::getColor()
 {
     return m_color;
 }

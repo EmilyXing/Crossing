@@ -25,7 +25,7 @@ bool Board::init()
     return true;
 }
 
-bool Board::addBall(int row, int col, int color)
+bool Board::addBall(int row, int col, Color color)
 {
     if(m_flags[row][col])
     {
