@@ -8,6 +8,7 @@
 
 #include "Board.hpp"
 #include "Ball.hpp"
+#include <stdlib.h>
 USING_NS_CC;
 using namespace std;
 
@@ -59,4 +60,29 @@ bool Board::removeBall(int row, int col)
     m_flags[row][col] = nullptr;
     
     return true;
+}
+
+int Board::generateInt(int smallest, int largest)
+{
+    return arc4random() % (largest - smallest + 1) + smallest;
+}
+
+void Board::generateBalls()
+{
+    int count = 10; // 给board上加10个球
+    
+    while(count > 0)
+    {
+        int v1 = generateInt(0,7);
+        int v2 = generateInt(0,7);
+        Color color = (Color)generateInt(1,5);
+        
+        if(!m_flags[v1][v2])
+        {
+            addBall(v1, v2, color);
+            count--;
+        }
+        
+        CCLOG("v1 = %d v2 = %d color = %d", v1,v2,color);
+    }
 }

@@ -30,11 +30,7 @@ bool GameScene::init()
     
     rootNode -> addChild(board);
     
-    board -> addBall(2, 3, Color::green);
-    
-    board -> addBall(4, 5, Color::purple);
-    
-    //board -> removeBall(2,3);
+    board -> generateBalls();
     
     return true;
 }

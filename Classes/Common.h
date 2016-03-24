@@ -9,6 +9,8 @@
 #ifndef Common_h
 #define Common_h
 
+#include <stdlib.h>
+
 enum Color
 {
     blue = 1,
@@ -17,5 +19,7 @@ enum Color
     orange,
     purple
 };
+
+
 
 #endif /* Common_h */

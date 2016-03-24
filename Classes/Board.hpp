@@ -17,16 +17,24 @@ class Ball;
 
 class Board : public cocos2d::Sprite
 {
-    std::vector<std::vector<Ball *> > m_flags;
+    
 public:
     
     CREATE_FUNC(Board);
     
     virtual bool init() override;
     
+    void generateBalls();
+    
+private:
+    
+    std::vector<std::vector<Ball *> > m_flags;
+    
     bool addBall(int row, int col,Color color);
     
     bool removeBall(int row, int col);
+    
+    int generateInt(int smallest, int largest);
     
 };
 
