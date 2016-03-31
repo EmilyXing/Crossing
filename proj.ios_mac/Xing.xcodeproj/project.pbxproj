@@ -253,16 +253,16 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
+				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				A10AA03A1C9F57A500EE907D /* GameScene.cpp */,
+				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				A10AA03B1C9F57A500EE907D /* GameScene.hpp */,
-				A10AA03D1C9F5C9300EE907D /* Ball.cpp */,
-				A10AA03E1C9F5C9300EE907D /* Ball.hpp */,
-				A10AA0401C9F65E000EE907D /* Board.cpp */,
+				A10AA03A1C9F57A500EE907D /* GameScene.cpp */,
 				A10AA0411C9F65E000EE907D /* Board.hpp */,
+				A10AA0401C9F65E000EE907D /* Board.cpp */,
+				A10AA03E1C9F5C9300EE907D /* Ball.hpp */,
+				A10AA03D1C9F5C9300EE907D /* Ball.cpp */,
 				A1DB045C1CA23B0A002F4BC8 /* Common.h */,
 			);
 			name = Classes;

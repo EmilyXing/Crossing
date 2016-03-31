@@ -20,6 +20,7 @@ enum Color
     purple
 };
 
-
+const int GRID_SIZE = 80;
+const int BOARD_SIZE = 8;
 
 #endif /* Common_h */

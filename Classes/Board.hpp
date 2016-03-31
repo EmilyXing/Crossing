@@ -36,6 +36,12 @@ private:
     
     int generateInt(int smallest, int largest);
     
+    void setupTouchEvents();
+    
+    void processTouch(cocos2d::Vec2);
+    
+    
+    
 };
 
 
