@@ -171,13 +171,17 @@ bool Board::removeBall(int row, int col)
     
     auto pos = m_flags[row][col]->getPosition();
     
-    auto moveUp = MoveTo::create(0.1, Vec2(pos.x, pos.y + GRID_SIZE));
+    auto moveUp = MoveBy::create(0.1, Vec2(0,50)); // ball在0.1秒内上移50个point
     
-    auto easeMoveUp = EaseIn::create(moveUp, 0.3);
+    auto easeMoveUp = EaseIn::create(moveUp, 0.3); // 加速度
     
-    auto moveDown = MoveTo::create((pos.y + GRID_SIZE) / 1000,Vec2(pos.x, - GRID_SIZE / 2));
+    auto moveDown = MoveTo::create((pos.y + GRID_SIZE) / 1000, Vec2(pos.x, - GRID_SIZE / 2));
     
     auto easeMoveDown = EaseOut::create(moveDown, 0.3);
+    
+    auto fadeOut = FadeOut::create((pos.y+GRID_SIZE)/500.0f);
+    
+    auto downAndFadeOut = Spawn::createWithTwoActions(easeMoveDown, fadeOut);
     
     auto removeSelfFunc = CallFunc::create([=](){ // &:表示这个函数里引用的变量都是外面这个函数的 =:值传递 复制
         
@@ -186,7 +190,7 @@ bool Board::removeBall(int row, int col)
         this->m_flags[row][col] = nullptr;
     });
     
-    auto seq = Sequence::create(easeMoveUp, easeMoveDown, removeSelfFunc,nullptr);
+    auto seq = Sequence::create(easeMoveUp, downAndFadeOut, removeSelfFunc,nullptr);
     
     m_flags[row][col]->runAction(seq);
     
