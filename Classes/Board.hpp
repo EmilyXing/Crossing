@@ -20,6 +20,7 @@ class Board : public cocos2d::Sprite
     
 public:
     
+    // 生成一个create方法
     CREATE_FUNC(Board);
     
     virtual bool init() override;

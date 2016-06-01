@@ -169,9 +169,26 @@ bool Board::removeBall(int row, int col)
         return false;
     }
     
-    m_flags[row][col] -> removeFromParent();
+    auto pos = m_flags[row][col]->getPosition();
     
-    m_flags[row][col] = nullptr;
+    auto moveUp = MoveTo::create(0.1, Vec2(pos.x, pos.y + GRID_SIZE));
+    
+    auto easeMoveUp = EaseIn::create(moveUp, 0.3);
+    
+    auto moveDown = MoveTo::create((pos.y + GRID_SIZE) / 1000,Vec2(pos.x, - GRID_SIZE / 2));
+    
+    auto easeMoveDown = EaseOut::create(moveDown, 0.3);
+    
+    auto removeSelfFunc = CallFunc::create([=](){ // &:表示这个函数里引用的变量都是外面这个函数的 =:值传递 复制
+        
+        this->m_flags[row][col] -> removeFromParent();
+        
+        this->m_flags[row][col] = nullptr;
+    });
+    
+    auto seq = Sequence::create(easeMoveUp, easeMoveDown, removeSelfFunc,nullptr);
+    
+    m_flags[row][col]->runAction(seq);
     
     return true;
 }
