@@ -31,12 +31,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // 背景的布 OpenGL View 如果没有 create 如果有 get
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::createWithRect("Xing", Rect(0, 0, 960, 640));
+        glview = GLViewImpl::createWithRect("Xing", Rect(0, 0, 640, 960));
         director->setOpenGLView(glview);
     }
     
     // get之后 设置分辨率 以及屏幕适配
-    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
+    director->getOpenGLView()->setDesignResolutionSize(640, 960, ResolutionPolicy::SHOW_ALL);
 
 
     // 显示debug数据 记得app发布时设置成false

@@ -26,7 +26,7 @@ bool GameScene::init()
     
     auto board = Board::create();
     
-    board -> setPosition(480,320); // 分辨率是960,640 相当于把board放中间
+    board -> setPosition(320,480); // 分辨率是640,960 相当于把board放中间
     
     rootNode -> addChild(board);
     

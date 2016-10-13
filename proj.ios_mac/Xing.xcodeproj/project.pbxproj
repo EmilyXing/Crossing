@@ -14,8 +14,6 @@
 		2D8E4310A2E154128CD9AB6F /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51554DA9A2FA70F46AF9E679 /* libcocos2d Mac.a */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
-		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
-		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -55,6 +53,9 @@
 		A10AA03C1C9F57A500EE907D /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A10AA03A1C9F57A500EE907D /* GameScene.cpp */; };
 		A10AA03F1C9F5C9300EE907D /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A10AA03D1C9F5C9300EE907D /* Ball.cpp */; };
 		A10AA0421C9F65E000EE907D /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A10AA0401C9F65E000EE907D /* Board.cpp */; };
+		A15DBE781DACA83D0047D488 /* StartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A15DBE761DACA83D0047D488 /* StartScene.cpp */; };
+		A15DBE7B1DACA85E0047D488 /* EndScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A15DBE791DACA85E0047D488 /* EndScene.cpp */; };
+		A15DBE7E1DAD68260047D488 /* UserData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A15DBE7C1DAD68260047D488 /* UserData.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -75,8 +76,6 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -121,6 +120,12 @@
 		A10AA03E1C9F5C9300EE907D /* Ball.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ball.hpp; sourceTree = "<group>"; };
 		A10AA0401C9F65E000EE907D /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		A10AA0411C9F65E000EE907D /* Board.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Board.hpp; sourceTree = "<group>"; };
+		A15DBE761DACA83D0047D488 /* StartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartScene.cpp; sourceTree = "<group>"; };
+		A15DBE771DACA83D0047D488 /* StartScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StartScene.hpp; sourceTree = "<group>"; };
+		A15DBE791DACA85E0047D488 /* EndScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EndScene.cpp; sourceTree = "<group>"; };
+		A15DBE7A1DACA85E0047D488 /* EndScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EndScene.hpp; sourceTree = "<group>"; };
+		A15DBE7C1DAD68260047D488 /* UserData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserData.cpp; sourceTree = "<group>"; };
+		A15DBE7D1DAD68260047D488 /* UserData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UserData.hpp; sourceTree = "<group>"; };
 		A1DB045C1CA23B0A002F4BC8 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -253,16 +258,20 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				A10AA03B1C9F57A500EE907D /* GameScene.hpp */,
+				46880B8519C43A87006E1F66 /* AppDelegate.h */,
+				A15DBE761DACA83D0047D488 /* StartScene.cpp */,
+				A15DBE771DACA83D0047D488 /* StartScene.hpp */,
 				A10AA03A1C9F57A500EE907D /* GameScene.cpp */,
-				A10AA0411C9F65E000EE907D /* Board.hpp */,
+				A10AA03B1C9F57A500EE907D /* GameScene.hpp */,
 				A10AA0401C9F65E000EE907D /* Board.cpp */,
-				A10AA03E1C9F5C9300EE907D /* Ball.hpp */,
+				A10AA0411C9F65E000EE907D /* Board.hpp */,
 				A10AA03D1C9F5C9300EE907D /* Ball.cpp */,
+				A10AA03E1C9F5C9300EE907D /* Ball.hpp */,
+				A15DBE791DACA85E0047D488 /* EndScene.cpp */,
+				A15DBE7A1DACA85E0047D488 /* EndScene.hpp */,
+				A15DBE7C1DAD68260047D488 /* UserData.cpp */,
+				A15DBE7D1DAD68260047D488 /* UserData.hpp */,
 				A1DB045C1CA23B0A002F4BC8 /* Common.h */,
 			);
 			name = Classes;
@@ -440,8 +449,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15DBE7B1DACA85E0047D488 /* EndScene.cpp in Sources */,
+				A15DBE781DACA83D0047D488 /* StartScene.cpp in Sources */,
+				A15DBE7E1DAD68260047D488 /* UserData.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				A10AA0421C9F65E000EE907D /* Board.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -457,7 +468,6 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
