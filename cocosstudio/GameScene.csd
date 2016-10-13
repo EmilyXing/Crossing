@@ -4,27 +4,27 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Tag="4" ctype="GameNodeObjectData">
-        <Size X="960.0000" Y="640.0000" />
+        <Size X="640.0000" Y="960.0000" />
         <Children>
-          <AbstractNodeData Name="background" ActionTag="1652364482" Tag="6" IconVisible="False" ctype="SpriteObjectData">
-            <Size X="960.0000" Y="640.0000" />
+          <AbstractNodeData Name="background" ActionTag="1652364482" Tag="6" IconVisible="False" RightMargin="-320.0000" TopMargin="320.0000" ctype="SpriteObjectData">
+            <Size X="1080.0000" Y="1920.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="480.0000" Y="320.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.5000" />
-            <PreSize X="1.0000" Y="1.0000" />
+            <PrePosition X="0.7500" Y="0.3333" />
+            <PreSize X="1.5000" Y="0.6667" />
             <FileData Type="Normal" Path="assets/background.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="logo" ActionTag="-1081956772" Tag="7" IconVisible="False" LeftMargin="8.0000" RightMargin="830.0000" TopMargin="9.5000" BottomMargin="563.5000" ctype="SpriteObjectData">
+          <AbstractNodeData Name="logo" ActionTag="-1081956772" Tag="7" IconVisible="False" LeftMargin="-7.3331" RightMargin="525.3331" TopMargin="-263.3890" BottomMargin="1156.3890" ctype="SpriteObjectData">
             <Size X="122.0000" Y="67.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="69.0000" Y="597.0000" />
+            <Position X="53.6669" Y="1189.8890" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0719" Y="0.9328" />
-            <PreSize X="0.1271" Y="0.1047" />
+            <PrePosition X="0.0839" Y="1.2395" />
+            <PreSize X="0.1906" Y="0.0698" />
             <FileData Type="Normal" Path="assets/logo.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>

@@ -12,8 +12,11 @@
           <Image Name="ball5.png" />
           <Image Name="board.png" />
           <Image Name="logo.png" />
+          <Image Name="main_logo.png" />
+          <Image Name="play_button.png" />
         </Folder>
         <Project Name="GameScene.csd" Type="Scene" />
+        <Project Name="StartScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
