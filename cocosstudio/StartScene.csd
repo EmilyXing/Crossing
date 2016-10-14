@@ -17,17 +17,6 @@
             <FileData Type="Normal" Path="assets/background.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="play_button" ActionTag="1242773501" Tag="6" IconVisible="False" LeftMargin="169.0000" RightMargin="169.0000" TopMargin="460.0000" BottomMargin="200.0000" ctype="SpriteObjectData">
-            <Size X="302.0000" Y="300.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="320.0000" Y="350.0000" />
-            <Scale ScaleX="0.5000" ScaleY="0.5000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.3646" />
-            <PreSize X="0.4719" Y="0.3125" />
-            <FileData Type="Normal" Path="assets/play_button.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
           <AbstractNodeData Name="main_logo_3" ActionTag="69041658" Tag="7" IconVisible="False" LeftMargin="-150.4396" RightMargin="-154.5604" TopMargin="55.7089" BottomMargin="470.2911" ctype="SpriteObjectData">
             <Size X="945.0000" Y="434.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -58,6 +47,21 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8572" Y="0.9875" />
             <PreSize X="0.1672" Y="0.0562" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="play_button" ActionTag="-51434608" Tag="10" IconVisible="False" LeftMargin="169.0000" RightMargin="169.0000" TopMargin="450.0000" BottomMargin="210.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="272" Scale9Height="278" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="302.0000" Y="300.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="320.0000" Y="360.0000" />
+            <Scale ScaleX="0.5000" ScaleY="0.5000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.3750" />
+            <PreSize X="0.4719" Y="0.3125" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Normal" Path="assets/play_button.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
