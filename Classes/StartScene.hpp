@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <cocos2d.h>
+#include "ui/CocosGUI.h"
 
 class StartScene : public cocos2d::Scene
 {

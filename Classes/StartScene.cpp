@@ -7,6 +7,10 @@
 //
 
 #include "StartScene.hpp"
+#include "cocostudio/CocoStudio.h"
+#include "ui/CocosGUI.h"
+#include "GameScene.hpp"
+USING_NS_CC;
 
 bool StartScene::init()
 {
@@ -18,8 +22,24 @@ bool StartScene::init()
     auto rootNode = CSLoader::createNode("StartScene.csb");
     addChild(rootNode);
     
-    auto logo = Label::createWithTTF("Xing", "ttf_from_ue.ttf", 24);
+    auto startPlay = static_cast<cocos2d::ui::Button *>(rootNode -> getChildByName("play_button"));
     
+    startPlay -> addTouchEventListener([](Ref* pSender, cocos2d::ui::Widget::TouchEventType type){
+        switch(type)
+        {
+            case ui::Widget::TouchEventType::BEGAN:
+                break;
+                
+            case ui::Widget::TouchEventType::ENDED:
+                
+                log("pressed");
+                Director::getInstance() -> replaceScene(GameScene::create());
+                break;
+                
+            default:
+                break;
+        }
+    });
     
     return true;
 }
