@@ -22,9 +22,9 @@ bool StartScene::init()
     auto rootNode = CSLoader::createNode("StartScene.csb");
     addChild(rootNode);
     
-    auto startPlay = static_cast<cocos2d::ui::Button *>(rootNode -> getChildByName("play_button"));
+    auto startPlay = static_cast<ui::Button *>(rootNode -> getChildByName("play_button"));
     
-    startPlay -> addTouchEventListener([](Ref* pSender, cocos2d::ui::Widget::TouchEventType type){
+    startPlay -> addTouchEventListener([](Ref* pSender, ui::Widget::TouchEventType type){
         switch(type)
         {
             case ui::Widget::TouchEventType::BEGAN:
