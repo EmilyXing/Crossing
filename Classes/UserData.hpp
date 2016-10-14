@@ -19,7 +19,7 @@ public:
     
     UserData(): m_highestScore(0) {};
     
-    UserData * getInstance();
+    static UserData * getInstance();
     int getHighestScore();
     void updateHighestScore(int);
 };

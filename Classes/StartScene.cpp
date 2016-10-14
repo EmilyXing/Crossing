@@ -10,6 +10,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "GameScene.hpp"
+#include "UserData.hpp"
 USING_NS_CC;
 
 bool StartScene::init()
@@ -40,6 +41,10 @@ bool StartScene::init()
                 break;
         }
     });
+    
+    auto highestScore = static_cast<ui::Text *>(rootNode -> getChildByName("score_label"));
+    
+    highestScore -> setString(std::to_string(UserData::getInstance() -> getHighestScore()));
     
     return true;
 }
