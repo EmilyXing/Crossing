@@ -6,6 +6,7 @@
 //
 //
 
+#include "EndScene.hpp"
 #include "Board.hpp"
 #include "Ball.hpp"
 #include <stdlib.h>
@@ -73,7 +74,7 @@ void Board::setupTouchEvents()
 void Board::processTouch(Vec2 location)
 {
     //获取窗口大小
-    //Size windowSize = Director::getInstance()->getWinSize();
+//    Size windowSize = Director::getInstance()->getWinSize();
 //    int row = location.y / GRID_SIZE;
 //    int col = (location.x - (windowSize.width - windowSize.height)/2) / GRID_SIZE;
     
@@ -188,11 +189,24 @@ bool Board::removeBall(int row, int col)
         this->m_flags[row][col] -> removeFromParent();
         
         this->m_flags[row][col] = nullptr;
+        
+        // 每次消除完 判断game是否要结束
+        
+        if(isGameover())
+        {
+            Director::getInstance() -> replaceScene(EndScene::create());
+        }
     });
     
     auto seq = Sequence::create(easeMoveUp, downAndFadeOut, removeSelfFunc,nullptr);
     
     m_flags[row][col]->runAction(seq);
+    
+    // 回调函数
+    if (m_onDeleted)
+    {
+        m_onDeleted();
+    }
     
     return true;
 }
@@ -220,4 +234,76 @@ void Board::generateBalls()
         
         CCLOG("v1 = %d v2 = %d color = %d", v1,v2,color);
     }
+}
+
+bool Board::isGameover()
+{
+    for(int i = 0; i < BOARD_SIZE; i++)
+    {
+        for(int j = 0; j < BOARD_SIZE; j++)
+        {
+            if(m_flags[i][j])
+            {
+                continue;
+            }
+            
+            if(hasSameColorBall(i, j))
+            {
+                return false;
+            }
+        }
+    }
+    
+    return true;
+}
+
+bool Board::hasSameColorBall(int row, int col)
+{
+    vector<int> balls(5, 0);
+    
+    for(int i = row - 1; i >= 0; i--)
+    {
+        if(m_flags[i][col])
+        {
+            balls[m_flags[i][col] -> getColor()]++;
+            break;
+        }
+    }
+    
+    for(int i = row + 1; i < BOARD_SIZE; i++)
+    {
+        if(m_flags[i][col])
+        {
+            balls[m_flags[i][col] -> getColor()]++;
+            break;
+        }
+    }
+    
+    for(int i = col - 1; i >= 0; i--)
+    {
+        if(m_flags[row][i])
+        {
+            balls[m_flags[row][i] -> getColor()]++;
+            break;
+        }
+    }
+    
+    for(int i = col + 1; i < BOARD_SIZE; i++)
+    {
+        if(m_flags[row][i])
+        {
+            balls[m_flags[row][i] -> getColor()]++;
+            break;
+        }
+    }
+    
+    for(auto a : balls)
+    {
+        if(a >= 2)
+        {
+            return true;
+        }
+    }
+    
+    return false;
 }

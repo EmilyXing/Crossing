@@ -13,10 +13,14 @@
 
 class GameScene : public cocos2d::Scene
 {
+    int m_score;
+    
 public:
+    
     CREATE_FUNC(GameScene);
     
     virtual bool init() override;
+    
 };
 
 #endif /* GameScene_hpp */

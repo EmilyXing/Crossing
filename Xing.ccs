@@ -15,9 +15,9 @@
           <Image Name="main_logo.png" />
           <Image Name="play_button.png" />
         </Folder>
+        <Project Name="EndScene.csd" Type="Scene" />
         <Project Name="GameScene.csd" Type="Scene" />
         <Project Name="StartScene.csd" Type="Scene" />
-        <Project Name="EndScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -21,6 +21,8 @@ bool GameScene::init()
         return false;
     }
     
+    m_score = 0;
+    
     auto rootNode = CSLoader::createNode("GameScene.csb");
     addChild(rootNode);
     
@@ -31,6 +33,18 @@ bool GameScene::init()
     rootNode -> addChild(board);
     
     board -> generateBalls();
+    
+    
+    // 设置onDeleted回调函数
+    board -> m_onDeleted = [&,rootNode]() {
+        
+        m_score++;
+        
+        auto currentScore = static_cast<ui::Text *>(rootNode -> getChildByName("current_score_label"));
+        
+        currentScore -> setString(std::to_string(m_score));
+    };
+    
     
     return true;
 }

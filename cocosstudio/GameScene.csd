@@ -17,7 +17,7 @@
             <FileData Type="Normal" Path="assets/background.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="main_logo_4" ActionTag="540572723" Tag="16" IconVisible="False" LeftMargin="-320.1733" RightMargin="15.1733" TopMargin="-146.7343" BottomMargin="672.7343" ctype="SpriteObjectData">
+          <AbstractNodeData Name="main_logo_4" ActionTag="540572723" Tag="16" IconVisible="False" LeftMargin="-320.1733" RightMargin="15.1733" TopMargin="-146.7344" BottomMargin="672.7343" ctype="SpriteObjectData">
             <Size X="945.0000" Y="434.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="152.3267" Y="889.7343" />
