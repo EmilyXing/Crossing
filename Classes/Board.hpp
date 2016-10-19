@@ -30,6 +30,7 @@ public:
 public:
     // 处理消除后的回调函数指针：返回值是void，参数一个void
     std::function<void(void)> m_onDeleted;
+    std::function<void(void)> m_isOver;
     
 private:
     

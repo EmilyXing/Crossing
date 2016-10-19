@@ -7,10 +7,13 @@
 //
 
 #include "GameScene.hpp"
+#include "EndScene.hpp"
+#include "UserData.hpp"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "Board.hpp"
 #include "Common.h"
+
 
 USING_NS_CC;
 
@@ -43,6 +46,14 @@ bool GameScene::init()
         auto currentScore = static_cast<ui::Text *>(rootNode -> getChildByName("current_score_label"));
         
         currentScore -> setString(std::to_string(m_score));
+    };
+    
+    
+    // 设置isOver回调函数
+    board -> m_isOver = [&](){
+        
+        UserData::getInstance() -> setLastScore(m_score);
+        Director::getInstance() -> replaceScene(EndScene::create());
     };
     
     

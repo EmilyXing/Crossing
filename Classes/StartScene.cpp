@@ -23,6 +23,7 @@ bool StartScene::init()
     auto rootNode = CSLoader::createNode("StartScene.csb");
     addChild(rootNode);
     
+    // start button
     auto startPlay = static_cast<ui::Button *>(rootNode -> getChildByName("play_button"));
     
     startPlay -> addTouchEventListener([](Ref* pSender, ui::Widget::TouchEventType type){
@@ -33,7 +34,6 @@ bool StartScene::init()
                 
             case ui::Widget::TouchEventType::ENDED:
                 
-                log("pressed");
                 Director::getInstance() -> replaceScene(GameScene::create());
                 break;
                 
@@ -42,6 +42,7 @@ bool StartScene::init()
         }
     });
     
+    // highest score
     auto highestScore = static_cast<ui::Text *>(rootNode -> getChildByName("score_label"));
     
     highestScore -> setString(std::to_string(UserData::getInstance() -> getHighestScore()));

@@ -20,6 +20,8 @@ enum Color
     purple
 };
 
+const int COLOR_SIZE = 5;
+
 const int GRID_SIZE = 80;
 const int BOARD_SIZE = 8;
 

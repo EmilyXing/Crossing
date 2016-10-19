@@ -14,14 +14,19 @@
 class UserData
 {
     int m_highestScore;
+    int m_lastScore;
     
 public:
     
-    UserData(): m_highestScore(0) {};
+    UserData() : m_highestScore(0), m_lastScore(0) {}
     
     static UserData * getInstance();
+    
+    int getLastScore();
+    void setLastScore(int);
+    
     int getHighestScore();
-    void updateHighestScore(int);
+    
 };
 
 #endif /* UserData_hpp */

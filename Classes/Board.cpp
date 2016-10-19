@@ -138,6 +138,7 @@ void Board::processTouch(Vec2 location)
     }
     
     if(flag) CCLOG("wrong touch");
+    
 }
 
 
@@ -170,6 +171,9 @@ bool Board::removeBall(int row, int col)
         return false;
     }
     
+    
+    log("delete a ball with color %d", m_flags[row][col] -> getColor());
+    
     auto pos = m_flags[row][col]->getPosition();
     
     auto moveUp = MoveBy::create(0.1, Vec2(0,50)); // ball在0.1秒内上移50个point
@@ -190,12 +194,15 @@ bool Board::removeBall(int row, int col)
         
         this->m_flags[row][col] = nullptr;
         
-        // 每次消除完 判断game是否要结束
         
-        if(isGameover())
+        // 每次消除完 判断game是否要结束  这个判断放在每次touch处理之后不好使 可能是因为remove是个过程 要等彻底remove了之后才能判断
+        
+        if(isGameover() && m_isOver)
         {
-            Director::getInstance() -> replaceScene(EndScene::create());
+            log("game over");
+            m_isOver();
         }
+        
     });
     
     auto seq = Sequence::create(easeMoveUp, downAndFadeOut, removeSelfFunc,nullptr);
@@ -259,13 +266,13 @@ bool Board::isGameover()
 
 bool Board::hasSameColorBall(int row, int col)
 {
-    vector<int> balls(5, 0);
+    vector<int> balls(COLOR_SIZE, 0);
     
     for(int i = row - 1; i >= 0; i--)
     {
         if(m_flags[i][col])
         {
-            balls[m_flags[i][col] -> getColor()]++;
+            balls[m_flags[i][col] -> getColor() - 1]++;
             break;
         }
     }
@@ -274,7 +281,7 @@ bool Board::hasSameColorBall(int row, int col)
     {
         if(m_flags[i][col])
         {
-            balls[m_flags[i][col] -> getColor()]++;
+            balls[m_flags[i][col] -> getColor() - 1]++;
             break;
         }
     }
@@ -283,7 +290,7 @@ bool Board::hasSameColorBall(int row, int col)
     {
         if(m_flags[row][i])
         {
-            balls[m_flags[row][i] -> getColor()]++;
+            balls[m_flags[row][i] -> getColor() - 1]++;
             break;
         }
     }
@@ -292,7 +299,7 @@ bool Board::hasSameColorBall(int row, int col)
     {
         if(m_flags[row][i])
         {
-            balls[m_flags[row][i] -> getColor()]++;
+            balls[m_flags[row][i] -> getColor() - 1]++;
             break;
         }
     }

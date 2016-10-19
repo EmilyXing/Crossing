@@ -9,6 +9,7 @@
 #include "UserData.hpp"
 
 // singleton
+
 UserData * UserData::getInstance()
 {
     static UserData * userData = nullptr;
@@ -21,12 +22,24 @@ UserData * UserData::getInstance()
     return userData;
 }
 
+int UserData::getLastScore()
+{
+    return m_lastScore;
+}
+
+
+void UserData::setLastScore(int x)
+{
+    m_lastScore = x;
+    
+    if(m_lastScore > m_highestScore)
+    {
+        m_highestScore = m_lastScore;
+    }
+}
+
 int UserData::getHighestScore()
 {
     return m_highestScore;
 }
 
-void UserData::updateHighestScore(int x)
-{
-    m_highestScore = x;
-}
