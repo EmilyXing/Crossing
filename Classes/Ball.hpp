@@ -22,8 +22,12 @@ public:
     void setColor(Color color);
     Color getColor();
     
+    bool isDeleted();
+    void setDeleted(bool);
+    
 private:
     Color m_color;
+    bool m_deleted;
 };
 
 #endif /* Ball_hpp */

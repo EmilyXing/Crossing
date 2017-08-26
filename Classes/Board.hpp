@@ -11,7 +11,9 @@
 
 #include <cocos2d.h>
 #include <vector>
+#include <map>
 #include "Common.h"
+
 
 class Ball;
 
@@ -36,9 +38,9 @@ private:
     
     std::vector<std::vector<Ball *> > m_flags;
     
-    bool addBall(int row, int col, Color color);
+    void addBall(int row, int col, Color color);
     
-    bool removeBall(int row, int col);
+    void removeBall(int row, int col);
     
     int generateInt(int smallest, int largest);
     
@@ -48,7 +50,7 @@ private:
     
     bool isGameover();
     
-    bool hasSameColorBall(int, int);
+    std::map<Color,std::vector<cocos2d::Vec2>> hasSameColorBall(int, int);
     
 };
 

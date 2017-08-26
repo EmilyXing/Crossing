@@ -20,6 +20,9 @@ enum Color
     purple
 };
 
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 960;
+
 const int COLOR_SIZE = 5;
 
 const int GRID_SIZE = 80;

@@ -37,3 +37,12 @@ Color Ball::getColor()
 {
     return m_color;
 }
+
+bool Ball::isDeleted()
+{
+    return m_deleted;
+}
+void Ball::setDeleted(bool deleted)
+{
+    m_deleted = deleted;
+}
